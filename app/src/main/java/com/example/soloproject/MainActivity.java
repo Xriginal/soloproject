@@ -10,7 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +31,8 @@ public class MainActivity extends AppCompatActivity {
                 String nameString = name.getText().toString();
                 String passwordString = password.getText().toString();
 
-                if (nameString.equals(user) && passwordString.equals(pass)) {
+                if (nameString.equals(user) && passwordString.equals(pass))
+                {
                     Intent i = new Intent(MainActivity.this, LandingPage.class);
                     startActivity(i);
                 } else if (!nameString.equals(user) && !passwordString.equals(pass)) {
@@ -39,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
                     DrawableCompat.setTint(password.getBackground(), ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
                 } else if (!password.equals(pass)) {
                     DrawableCompat.setTint(password.getBackground(), ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
+                    DrawableCompat.setTint(name.getBackground(), ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
                 } else {
+                    DrawableCompat.setTint(password.getBackground(), ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_primary));
                     DrawableCompat.setTint(name.getBackground(), ContextCompat.getColor(getApplicationContext(), R.color.design_default_color_error));
                 }
             }
