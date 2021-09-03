@@ -40,7 +40,7 @@ public class LandingPage extends AppCompatActivity {
                 {
                     if(post.getId() == 1){
                     String content = "";
-                    content += "ID: "+ post.getId() + "\n";
+                    content +=   "\n" +"ID: "+ post.getId() + "\n";
                     content += "User ID: "+ post.getUserId() + "\n";
                     content += "Title: "+ post.getTitle() + "\n";
                     content += "Text: "+ post.getText() + "\n";
